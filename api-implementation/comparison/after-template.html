@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="{{lang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{pageTitle}}</title>
+    <!-- Preload Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <style type="text/css">
+      /* Custom Font Strategy: Phudu → General Sans → System Fonts */
+      
+      /* Ensure fonts load correctly */
+      @font-face {
+        font-family: "Phudu";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/phudu/v1/0FlMVPXVHdLlqPN9.woff2) format("woff2");
+      }
+      
+      /* Email client reset styles */
+      body, table, td, a {
+        text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      
+      /* Base font settings */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Phudu', 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        background-color: white;
+      }
+      
+      /* Header styles - Semi-Bold fallback */
+      .header-text, .welcome-text, .download-title {
+        font-family: 'Phudu', 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 600;
+      }
+      
+      /* Button styles - Semi-Bold fallback */
+      .button-text, .cta-button {
+        font-family: 'Phudu', 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 600;
+      }
+      
+      /* Body text styles - Regular fallback */
+      .body-text, .description-text, .footer-text {
+        font-family: 'Phudu', 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+      }
+      
+      /* Feature titles - Semi-Bold fallback */
+      .feature-title {
+        font-family: 'Phudu', 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 600;
+      }
+      
+      /* Responsive styles */
+      @media screen and (max-width: 600px) {
+        .responsive-table {
+          width: 100% !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main table - white background -->
+    <table
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      width="100%"
+      style="margin: 0 auto; background-color: white"
+    >
+      <tr>
+        <td align="center">
+          <!-- Centered black content container -->
+          <table
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            width="640"
+            style="background-color: #000000; margin: 0 auto"
+          >
+            <tr>
+              <td>
+                <!-- Background image table -->
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  width="100%"
+                  style="
+                    background-image: url(&quot;https://sonikfm.s3.us-east-1.amazonaws.com/static/email-background-min.png&quot;);
+                    background-repeat: no-repeat;
+                    background-position: top right;
+                    background-size: cover;
+                  "
+                >
+                  <tr>
+                    <td>
+                      <!-- Content wrapper with internal margins -->
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        width="100%"
+                        style="position: relative; z-index: 10"
+                      >
+                        <!-- Logo and Heart in same row -->
+                        <tr>
+                          <td style="padding-top: 40px">
+                            <table
+                              width="100%"
+                              cellpadding="0"
+                              cellspacing="0"
+                              border="0"
+                            >
+                              <tr>
+                                <!-- Heart image on left -->
+                                <td
+                                  align="left"
+                                  width="130"
+                                  style="padding-left: 40px; padding-top: 30px"
+                                >
+                                  <img
+                                    src="https://sonikfm.s3.us-east-1.amazonaws.com/static/email-heart.png"
+                                    alt="heart"
+                                    height="92"
+                                    width="130"
+                                    style="display: block"
+                                  />
+                                </td>
+                                <!-- Logo in center -->
+                                <td align="center">
+                                  <img
+                                    src="https://firebasestorage.googleapis.com/v0/b/blog-website-acb59.appspot.com/o/testimages%2FGroup.png?alt=media&token=8809c006-a0f9-45ee-8370-bfe3d7b53c9e"
+                                    alt="{{logoAlt}}"
+                                    height="32"
+                                    width="110"
+                                  />
+                                </td>
+                                <!-- Empty cell for spacing -->
+                                <td
+                                  align="right"
+                                  width="130"
+                                  style="padding-right: 40px"
+                                ></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+
+                        <!-- Welcome text -->
+                        <tr>
+                          <td align="center" style="padding-top: 40px">
+                            <!-- Added inner wrapper with margins -->
+                            <table
+                              cellpadding="0"
+                              cellspacing="0"
+                              border="0"
+                              width="560"
+                              style="margin: 0 40px"
+                            >
+                              <tr>
+                                <td
+                                  class="welcome-text" style="font-size: 70px; font-weight: 600; margin: 0; line-height: 1; color: white; text-transform: uppercase;"
+                                >
+                                  {{welcomeText}}
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <table
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    border="0"
+                                  >
+                                    <tr>
+                                      <td
+                                        class="welcome-text" style="font-size: 70px; font-weight: 600; margin: 0; line-height: 1; color: white; text-transform: uppercase;"
+                                      >
+                                        {{toText}}
+                                      </td>
+                                      <td style="padding-left: 16px">
+                                        <img
+                                          src="https://sonikfm.s3.us-east-1.amazonaws.com/static/sonik-logo.png"
+                                          alt="{{welcomeImageAlt}}"
+                                          width="200"
+                                          height="51"
+                                        />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+
+                        <!-- Description -->
+                        <tr>
+                          <td align="center" style="padding-top: 40px">
+                            <!-- Added inner wrapper with margins -->
+                            <table
+                              cellpadding="0"
+                              cellspacing="0"
+                              border="0"
+                              width="560"
+                              style="margin: 0 40px"
+                            >
+                              <tr>
+                                <td
+                                  align="center"
+                                  class="description-text" style="font-size: 20px; color: white; font-weight: 400; letter-spacing: 0.05em; padding-bottom: 24px;"
+                                >
+                                  {{description.inviteText}}
+                                  <strong>{{description.companyName}}</strong>.
+                                  {{description.createAccount}}
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td align="center" style="padding-bottom: 24px">
+                                  <a
+                                    href="{{createAccountLink}}"
+                                    class="cta-button" style="background-color: #7c5df8; color: white; padding: 10px 24px; font-weight: 600; font-size: 22px; border-radius: 8px; text-decoration: none; display: inline-block;"
+                                  >
+                                    {{buttons.createAccount}}
+                                  </a>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td
+                                  align="center"
+                                  style="
+                                    font-size: 16px;
+                                    color: rgba(255, 255, 255, 0.8);
+                                  "
+                                >
+                                  {{description.ignoreMessage}}
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+
+                        <!-- Download box -->
+                        <tr>
+                          <td align="center" style="padding-top: 40px">
+                            <!-- Added inner wrapper with margins -->
+                            <table
+                              cellpadding="0"
+                              cellspacing="0"
+                              border="0"
+                              width="560"
+                              style="margin: 0 40px"
+                            >
+                              <tr>
+                                <td>
+                                  <table
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    border="0"
+                                    width="100%"
+                                    style="
+                                      background-color: rgba(
+                                        255,
+                                        255,
+                                        255,
+                                        0.1
+                                      );
+                                      border-radius: 12px;
+                                      padding: 40px 24px;
+                                      box-sizing: border-box;
+                                    "
+                                  >
+                                    <tr>
+                                      <td
+                                        align="center"
+                                        class="download-title" style="font-size: 36px; font-weight: 600; padding-bottom: 24px; color: white; text-transform: uppercase;"
+                                      >
+                                        {{downloadSection.title}}
+                                      </td>
+                                    </tr>
+                                    <!-- Download buttons -->
+                                    <tr>
+                                      <td
+                                        align="center"
+                                        style="padding-bottom: 24px"
+                                      >
+                                        <table
+                                          cellpadding="0"
+                                          cellspacing="0"
+                                          border="0"
+                                        >
+                                          <tr>
+                                            <td>
+                                              <a
+                                                href="{{appStoreUrl}}"
+                                                style="
+                                                  background-color: #f9dfc7;
+                                                  color: black;
+                                                  padding: 8px 24px;
+                                                  font-weight: 600;
+                                                  font-size: 20px;
+                                                  border-radius: 8px;
+                                                  text-decoration: none;
+                                                  display: inline-block;
+                                                "
+                                              >
+                                                <table
+                                                  cellpadding="0"
+                                                  cellspacing="0"
+                                                  border="0"
+                                                  width="100%"
+                                                >
+                                                  <tr>
+                                                    <td
+                                                      style="
+                                                        vertical-align: middle;
+                                                        text-align: center;
+                                                        padding-right: 8px;
+                                                        width: 22px;
+                                                      "
+                                                    >
+                                                      <img
+                                                        height="22"
+                                                        width="18"
+                                                        src="https://sonikfm.s3.us-east-1.amazonaws.com/static/apple.png"
+                                                        alt="{{downloadSection.appStoreAlt}}"
+                                                        style="display: block"
+                                                      />
+                                                    </td>
+                                                    <td
+                                                      style="
+                                                        vertical-align: middle;
+                                                        text-align: center;
+                                                        font-size: 20px;
+                                                        font-weight: 600;
+                                                        color: black;
+                                                      "
+                                                    >
+                                                      {{downloadSection.appStore}}
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </a>
+                                            </td>
+                                            <td style="padding-left: 16px">
+                                              <a
+                                                href="{{playStoreUrl}}"
+                                                style="
+                                                  background-color: #f9dfc7;
+                                                  color: black;
+                                                  padding: 8px 24px;
+                                                  font-weight: 600;
+                                                  font-size: 20px;
+                                                  border-radius: 8px;
+                                                  text-decoration: none;
+                                                  display: inline-block;
+                                                "
+                                              >
+                                                <table
+                                                  cellpadding="0"
+                                                  cellspacing="0"
+                                                  border="0"
+                                                  width="100%"
+                                                >
+                                                  <tr>
+                                                    <td
+                                                      style="
+                                                        vertical-align: middle;
+                                                        text-align: center;
+                                                        padding-right: 8px;
+                                                        width: 22px;
+                                                      "
+                                                    >
+                                                      <img
+                                                        height="22"
+                                                        width="18"
+                                                        src="https://sonikfm.s3.us-east-1.amazonaws.com/static/googleplay.png"
+                                                        alt="{{downloadSection.playStoreAlt}}"
+                                                        style="display: block"
+                                                      />
+                                                    </td>
+                                                    <td
+                                                      style="
+                                                        vertical-align: middle;
+                                                        text-align: center;
+                                                        font-size: 20px;
+                                                        font-weight: 600;
+                                                        color: black;
+                                                      "
+                                                    >
+                                                      {{downloadSection.playStore}}
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+
+                                    <!-- Features -->
+                                    <tr>
+                                      <td>
+                                        <table
+                                          cellpadding="0"
+                                          cellspacing="0"
+                                          border="0"
+                                          width="100%"
+                                        >
+                                          <tr valign="top">
+                                            <!-- Feature 1 -->
+                                            <td
+                                              width="33%"
+                                              valign="top"
+                                              style="padding: 0 8px"
+                                            >
+                                              <table
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                border="0"
+                                                width="100%"
+                                              >
+                                                <tr>
+                                                  <td align="center">
+                                                    <img
+                                                      height="24"
+                                                      width="24"
+                                                      src="https://sonikfm.s3.us-east-1.amazonaws.com/static/graph.png"
+                                                      alt="{{features.discovery.iconAlt}}"
+                                                    />
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td
+                                                    align="center"
+                                                    class="feature-title" style="font-weight: 600; padding-top: 10px; padding-bottom: 12px; letter-spacing: 1px; color: white; text-transform: uppercase;"
+                                                  >
+                                                    {{features.discovery.title}}
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td
+                                                    align="center"
+                                                    style="
+                                                      font-weight: 500;
+                                                      font-size: 16px;
+                                                      color: white;
+                                                    "
+                                                  >
+                                                    {{features.discovery.description}}
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>
+
+                                            <!-- Feature 2 -->
+                                            <td
+                                              width="33%"
+                                              valign="top"
+                                              style="padding: 0 8px"
+                                            >
+                                              <table
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                border="0"
+                                                width="100%"
+                                              >
+                                                <tr>
+                                                  <td align="center">
+                                                    <img
+                                                      height="24"
+                                                      width="24"
+                                                      src="https://sonikfm.s3.us-east-1.amazonaws.com/static/gradient-heart.png"
+                                                      alt="{{features.secure.iconAlt}}"
+                                                    />
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td
+                                                    align="center"
+                                                    class="feature-title" style="font-weight: 600; padding-top: 10px; padding-bottom: 12px; letter-spacing: 1px; color: white; text-transform: uppercase;"
+                                                  >
+                                                    {{features.secure.title}}
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td
+                                                    align="center"
+                                                    style="
+                                                      font-weight: 500;
+                                                      font-size: 16px;
+                                                      color: white;
+                                                    "
+                                                  >
+                                                    {{features.secure.description}}
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>
+
+                                            <!-- Feature 3 -->
+                                            <td
+                                              width="33%"
+                                              style="padding: 0 8px"
+                                            >
+                                              <table
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                border="0"
+                                                width="100%"
+                                              >
+                                                <tr>
+                                                  <td align="center">
+                                                    <img
+                                                      height="24"
+                                                      width="24"
+                                                      src="https://sonikfm.s3.us-east-1.amazonaws.com/static/gradient-zap.png"
+                                                      alt="{{features.transparent.iconAlt}}"
+                                                    />
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td
+                                                    align="center"
+                                                    class="feature-title" style="font-weight: 600; padding-top: 10px; padding-bottom: 12px; letter-spacing: 1px; color: white; text-transform: uppercase;"
+                                                  >
+                                                    {{features.transparent.title}}
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td
+                                                    align="center"
+                                                    style="
+                                                      font-weight: 500;
+                                                      font-size: 16px;
+                                                      color: white;
+                                                    "
+                                                  >
+                                                    {{features.transparent.description}}
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+
+                        <!-- Footer -->
+                        <tr>
+                          <td
+                            align="center"
+                            style="padding-top: 24px; padding-bottom: 40px"
+                          >
+                            <!-- Added inner wrapper with margins -->
+                            <table
+                              cellpadding="0"
+                              cellspacing="0"
+                              border="0"
+                              width="560"
+                              style="margin: 0 40px"
+                            >
+                              <tr>
+                                <td
+                                  style="
+                                    font-size: 14px;
+                                    color: rgba(255, 255, 255, 0.6);
+                                    padding-bottom: 10px;
+                                  "
+                                >
+                                  {{footer.emailSentTo}} {{userEmail}}
+                                  {{footer.unsubscribeText}}
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding-bottom: 10px">
+                                  <a
+                                    href="{{unsubscribeUrl}}"
+                                    style="
+                                      color: #6838ef;
+                                      text-decoration: underline;
+                                      text-underline-offset: 2px;
+                                      margin-right: 10px;
+                                    "
+                                  >
+                                    {{footer.unsubscribe}}
+                                  </a>
+                                  <a
+                                    href="{{preferencesUrl}}"
+                                    style="
+                                      color: #6838ef;
+                                      text-decoration: underline;
+                                      text-underline-offset: 2px;
+                                    "
+                                  >
+                                    {{footer.managePreferences}}
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="
+                                    font-size: 14px;
+                                    color: rgba(255, 255, 255, 0.6);
+                                  "
+                                >
+                                  {{footer.replyText}} {{supportEmail}}.<br /><br />
+                                  {{footer.copyright}}
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
