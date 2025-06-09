@@ -1,0 +1,58 @@
+{
+  "pageTitle": "Organization Invitation - Sonik",
+  "lang": "en",
+  "welcomeText": "WELCOME",
+  "toText": "TO",
+  "description": {
+    "inviteText": "You have been invited to join",
+    "companyName": "Acme Corporation",
+    "createAccount": "Click below to create your account and get started.",
+    "ignoreMessage": "If you did not request this invitation, please ignore this email."
+  },
+  "createAccountLink": "https://sonik.fm/invitation/abc123?type=organization-invitation",
+  "logoAlt": "Sonik Logo",
+  "welcomeImageAlt": "Sonik Logo",
+  "buttons": {
+    "createAccount": "CREATE ACCOUNT"
+  },
+  "downloadSection": {
+    "title": "DOWNLOAD THE APP",
+    "subtitle": "Get the full Sonik experience on your mobile device",
+    "appStore": "APP STORE",
+    "playStore": "GOOGLE PLAY",
+    "appStoreAlt": "Download on App Store",
+    "playStoreAlt": "Get it on Google Play"
+  },
+  "appStoreUrl": "https://apps.apple.com/app/sonik",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.sonik",
+  "features": {
+    "discovery": {
+      "title": "CREATE",
+      "description": "Build your musical identity with custom playlists and share your unique sound.",
+      "iconAlt": "Create Icon"
+    },
+    "secure": {
+      "title": "UPLOAD",
+      "description": "Share your original tracks and discover new music from emerging artists.",
+      "iconAlt": "Upload Icon"
+    },
+    "transparent": {
+      "title": "SHARE",
+      "description": "Connect with friends and artists, and build your music community.",
+      "iconAlt": "Share Icon"
+    }
+  },
+  "footer": {
+    "emailSentTo": "This email was sent to",
+    "unsubscribeText": ". If you no longer want to receive these emails, you can",
+    "unsubscribe": "unsubscribe",
+    "managePreferences": "manage your preferences"
+  },
+  "userEmail": "test@example.com",
+  "unsubscribeUrl": "https://sonik.fm/unsubscribe?token=abc123",
+  "preferencesUrl": "https://sonik.fm/preferences?token=abc123",
+  "privacyUrl": "https://sonik.fm/privacy",
+  "termsUrl": "https://sonik.fm/terms",
+  "supportUrl": "https://sonik.fm/support",
+  "websiteUrl": "https://sonik.fm"
+} 
